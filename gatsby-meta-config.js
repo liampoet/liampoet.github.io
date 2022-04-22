@@ -2,7 +2,7 @@ module.exports = {
   title: `LiamCoding`,
   description: `리암의 끄적임`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://www.zoomkoding.com`,
+  siteUrl: `https://liampoet.github.io/`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
