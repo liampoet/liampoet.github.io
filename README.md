@@ -10,6 +10,6 @@
   <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome" />
 </p>
 
-> March, 2022: Hello! I'm Liam. If you want to contact me, "<dnwjd6452@gmail.com>"
+> March, 2022: Hello! I'm Liam. If you want to contact me, ***<dnwjd6452@gmail.com>***
 
 # [Move to Liam's blog](https://liampoet.github.io/)
