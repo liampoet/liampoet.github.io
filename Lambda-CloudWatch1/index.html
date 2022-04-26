@@ -69,16 +69,21 @@
 <li>Lambda함수를 이용해 특정시간에 자동으로 카운트를 해야하는 방법이 필요해졌다!🙌</li>
 <li>AWS Lambda는 실시간으로 코드를 실행할 수는 있으나, 필요시에만 함수를 실행합니다. Lambda에 있는 함수를 자동으로 동작시킬 수 있는 기술을 찾던 중, 저는 Amazon CloudWatch에 있는 EventBridge를 알게되었습니다.</li>
 </ul>
+<br>
+<br>
 <h2 id="-들어가기전-알고가기--1" style="position:relative;"><a href="#-%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0%EC%A0%84-%EC%95%8C%EA%B3%A0%EA%B0%80%EA%B8%B0--1" aria-label=" 들어가기전 알고가기  1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔎 들어가기전, 알고가기! -1</h2>
 <p><strong>Lambda</strong></p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/ko_kr/lambda/latest/dg/welcome.html">Lambda</a>는 서버를 프로비저닝하거나 관리하지 않고도 코드를 실행할 수 있게 해주는 컴퓨팅 서비스입니다. Lambda는 고가용성 컴퓨팅 인프라에서 코드를 실행하고 서버와 운영 체제 유지 관리, 용량 프로비저닝 및 자동 조정, 코드 및 보안 패치 배포, 코드 모니터링 및 로깅 등 모든 컴퓨팅 리소스 관리를 수행할 수 있습니다. 또한 Lambda는 필요시에만 함수를 실행하며, 일일 몇 개의 요청에서 초당 수천 개의 요청까지 자동으로 확장이 가능합니다. 그리고 사용한 컴퓨팅 시간만큼만 비용을 지불하고, 코드가 실행되지 않을 때는 요금이 부과되지 않습니다.</li>
 </ul>
+<br>
 <p><strong>CloudWatch</strong></p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/ko_kr/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">CloudWatch</a>는 Amazon Web Services(AWS) 리소스 및 AWS에서 실행되는 애플리케이션을 실시간으로 모니터링합니다. CloudWatch를 사용하여 리소스 및 애플리케이션에 대해 측정할 수 있는 변수인 지표를 수집하고 추적할 수 있으며(<a href="https://docs.aws.amazon.com/ko_kr/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html">Amazon CloudWatch Logs</a>), <a href="https://docs.aws.amazon.com/ko_kr/eventbridge/latest/userguide/eb-what-is.html">Amazon EventBridge</a>를 이용해 특정한 이벤트를 처리할 수 도 있습니다.</li>
 <li><a href="https://docs.aws.amazon.com/ko_kr/eventbridge/latest/userguide/eb-what-is.html">EventBridge</a>는 과거에는  Amazon CloudWatch Events라고 불렸으며, Zendesk 또는 Shopify와 같은 이벤트 소스의 실시간 데이터 스트림을 AWS Lambda 및 기타 SaaS 애플리케이션과 같은 대상으로 전송하는 이벤트 기반 애플리케이션을 대규모로 손쉽게 구축할 수 있는 서버리스 이벤트 버스입니다.</li>
 </ul>
+<br>
+<br>
 <h2 id="-들어가기전-알고가기--2" style="position:relative;"><a href="#-%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0%EC%A0%84-%EC%95%8C%EA%B3%A0%EA%B0%80%EA%B8%B0--2" aria-label=" 들어가기전 알고가기  2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔎 들어가기전, 알고가기! -2</h2>
 <p><strong>크론(Cron) 표현식이란?🤔</strong></p>
 <ul>
@@ -86,6 +91,7 @@
 <li>유닉스 계열의 운영체제에서 시간 기반으로 job scheduling을 하는 프로세스를 <a href="https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm">크론 표현식(Cron Expressions)</a>라고 하며 자바 스프링의 Quartz나 Spring Scheduler에서도 사용하기도 한다고 합니다. 또한, 크론 표현식은 필드와 특수문자를 조합하여 스케쥴링을 조절할 수 있습니다.</li>
 <li>리눅스/유닉스 크론 표현식에서는 5개의 필드를 사용하고, Quartz 기반의 크론 표현식에서는 7개의 필드를 사용하는 String 문자열입니다. 공백으로 구분하고(” ”) 각 필드는 앞에서 부터 초, 분, 시, 일, 월, 요일, 년으로 구분합니다.</li>
 </ul>
+<br>
 <p><strong>크론 표현식 표현</strong></p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -123,6 +129,7 @@
 <li><strong>W</strong> : 가장 가까운 평일 (예) 15W는 15일에서 가장 가까운 평일 (월 ~ 금)을 찾음</li>
 <li><strong>#</strong> : 몇째주의 무슨 요일을 표현 (예) 3#2 : 2번째주 수요일</li>
 </ul>
+<br>
 <p><strong>크론 표현식 예제</strong></p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -150,6 +157,8 @@
 <li>크론 표현식에 대해 공부를 하면서 느낀점은, 어느정도만 알면 전혀 어렵지 않다는 것입니다. 표를 보고 대충 이해하여 한번만 만들어봐도 다음 부터는 쉽게 만들 수 있습니다.😀</li>
 <li><a href="http://www.cronmaker.com/?1">CronMaker</a>라는 원하는 크론 표현식을 생성해 주는 사이트 존재합니다. 대충 크론 표현식을 만든 후, 내가 만든 크론 표현식을 입력하고 Calcurate  next dates 버튼을 클릭하면, 내가 만든 크론 표현식으로 언제 실행될것인지 미리 볼수 있는 기능도 존재합니다.</li>
 </ul>
+<br>
+<br>
 <h2 id="-lambda-코드작성" style="position:relative;"><a href="#-lambda-%EC%BD%94%EB%93%9C%EC%9E%91%EC%84%B1" aria-label=" lambda 코드작성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📚 Lambda 코드작성</h2>
 <h3 id="1-lambda-함수생성" style="position:relative;"><a href="#1-lambda-%ED%95%A8%EC%88%98%EC%83%9D%EC%84%B1" aria-label="1 lambda 함수생성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Lambda 함수생성</h3>
 <p>아래와 같이 본인이 사용하는 언어를 선택한 후, Lambda 함수를 생성합니다. 그리고 VPC및 함수에 필요한 <a href="https://docs.aws.amazon.com/ko_kr/lambda/latest/dg/configuration-layers.html">Lambda Layer</a>를 설정합니다.</p>
@@ -176,6 +185,7 @@
         decoding="async"
       />
     </span></p>
+<br>
 <h3 id="2-lambda-코드작성" style="position:relative;"><a href="#2-lambda-%EC%BD%94%EB%93%9C%EC%9E%91%EC%84%B1" aria-label="2 lambda 코드작성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Lambda 코드작성</h3>
 <p>자동으로 카운트 해주어야할 데이터를 조건에 따라서 가짓 수를 나누어 주었습니다. 저는 필요에 따라 S3와 RDS를 연결하였습니다.</p>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">import</span> json
@@ -200,6 +210,8 @@ bucket_name <span class="token operator">=</span> <span class="token string">''<
     
     <span class="token keyword">with</span> conn<span class="token punctuation">.</span>cursor<span class="token punctuation">(</span>pymysql<span class="token punctuation">.</span>cursors<span class="token punctuation">.</span>DictCursor<span class="token punctuation">)</span> <span class="token keyword">as</span> cur<span class="token punctuation">:</span>
         <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre></div>
+<br>
+<br>
 <p>Amazon EventBridge 규칙 생성은 다음 포스팅에 이어서 작성을 해보도록 하겠습니다.😀</p>
 <div class="table-of-contents">
 <ul>
