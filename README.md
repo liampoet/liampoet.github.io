@@ -1,5 +1,5 @@
 <h1 align="center">
-  LiamCoding Blog - blog 수정중입니다.
+  LiamCoding Blog
 </h1>
 
 <p align="center">
