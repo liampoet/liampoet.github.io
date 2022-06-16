@@ -1,5 +1,5 @@
 <h1 align="center">
-  LiamCoding Blog - 블로그 수정중입니다😥
+  🚧 LiamCoding Blog - 블로그 수정중입니다😥 🚧
 </h1>
 
 <p align="center">
