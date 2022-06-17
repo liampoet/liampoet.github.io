@@ -117,7 +117,9 @@
 <p>Reference Count란 그 객체를 가리키는 Reference가 몇 개 존재하는지를 나타내는 것으로, Python에서의 GC(Garbage Collection)는 이러한 Reference Count가 0이 되면 해당 객체를 메모리에서 삭제시키는 메커니즘으로 동작하고 있습니다.</p>
 </blockquote>
 <br>
-<p>따라서 파이썬의 모든 객체는 Reference count, 즉 해당 변수가 참조된 수를 저장하고 있습니다. 여기서 문제가 발생하게 되는데, 멀티 쓰레드인 경우 여러 쓰레드가 하나의 객체를 사용한다면 Reference count를 관리하기 위해서 모든 객체에 대한 lock이 필요할 것입니다. 이러한 비효율을 막기 위해서 Python에서 GIL을 사용하게 되었습니다. <u>그 당시 GIL을 선택해야 했던 이유는 <a href="https://realpython.com/python-gil/">What Is the Python Global Interpreter Lock (GIL)?</a>에서 찾을 수 있었습니다.</u></p>
+<p>따라서 파이썬의 모든 객체는 Reference count, 즉 해당 변수가 참조된 수를 저장하고 있습니다. 여기서 문제가 발생하게 되는데, 멀티 쓰레드인 경우 여러 쓰레드가 하나의 객체를 사용한다면 Reference count를 관리하기 위해서 모든 객체에 대한 lock이 필요할 것입니다.</p>
+<br>
+<p>이러한 비효율을 막기 위해서 Python에서 GIL을 사용하게 되었습니다. <u>그 당시 GIL을 선택해야 했던 이유는 <a href="https://realpython.com/python-gil/">What Is the Python Global Interpreter Lock (GIL)?</a>에서 찾을 수 있었습니다.</u></p>
 <blockquote>
 <p>Python has been around since the days when operating systems did not have a concept of threads. Python was designed to be easy-to-use in order to make development quicker and more and more developers started using it. A lot of extensions were being written for the existing C libraries whose features were needed in Python. To prevent inconsistent changes, these C extensions required a thread-safe memory management which the GIL provided. The GIL is simple to implement and was easily added to Python. It provides a performance increase to single-threaded programs as only one lock needs to be managed. C libraries that were not thread-safe became easier to integrate. And these C extensions became one of the reasons why Python was readily adopted by different communities. As you can see, the GIL was a pragmatic solution to a difficult problem that the CPython developers faced early on in Python’s life.</p>
 </blockquote>
